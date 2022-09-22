@@ -2,10 +2,13 @@
 #define EXPLOTION_H
 
 
-class explotion
-{
-public:
-    explotion();
-};
+#include <QGraphicsPixmapItem>
+#include <QObject>
 
+class explotion : public QGraphicsPixmapItem, public QObject  {
+public:
+    explotion() = default;
+    ~explotion();
+    void removeExplosion();
+};
 #endif // EXPLOTION_H

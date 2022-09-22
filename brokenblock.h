@@ -2,10 +2,13 @@
 #define BROKENBLOCK_H
 
 
-class brokenblock
-{
+#include "block.h"
+
+class brokenblock : public Block {
 public:
-    brokenblock();
+    brokenblock() = default;
+    ~brokenblock();
 };
+
 
 #endif // BROKENBLOCK_H

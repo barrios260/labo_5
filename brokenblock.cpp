@@ -1,6 +1,7 @@
+#include <QGraphicsScene>
+
 #include "brokenblock.h"
 
-brokenblock::brokenblock()
-{
-
+brokenblock::~brokenblock() {
+    scene()->removeItem(this);
 }

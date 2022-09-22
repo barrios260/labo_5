@@ -1,2 +1,10 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/graphics">
+        <file>imagenes/bomba.png</file>
+        <file>imagenes/bomber.png</file>
+        <file>imagenes/destroyblock.png</file>
+        <file>imagenes/field.png</file>
+        <file>imagenes/fuego.png</file>
+        <file>imagenes/solidblock.png</file>
+    </qresource>
+</RCC>

@@ -13,10 +13,6 @@ MainWindow::MainWindow(QWidget *parent)
     //scene->addRect(scene->sceneRect());
     scene->addRect(0,0,20,20);
 
-    //barra=new QGraphicsRectItem(-30,-10,50,50);
-    //scene->addItem(barra);
-    //barra->setPos(200,300);
-
     ui->graphicsView->setBackgroundBrush(QBrush((QImage(":/imagenes/images/d6mz30q-77e56ee2-a107-4bb0-bb57-7ee37c4e5347.png"))));
 
     jugador = new soldado(":/imagenes/images/bomber.png",60,60);
@@ -41,11 +37,6 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     if(event->key()==Qt::Key_D){
         if(jugador->getX() < (scene->width()-36)) jugador->setX(jugador->getX()+vel);
     }
-
-    //if(event->key()==Qt::Key_W){
-       // if(jugador->getY() < (scene->height()) && !jugador->collidesWithItem(barra)) jugador->setY(jugador->getY()-vel);
-
-    //}
 
     if(event->key()==Qt::Key_S){
         if(jugador->getY() < (scene->height())) jugador->setY(jugador->getY()+vel);

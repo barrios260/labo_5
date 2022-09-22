@@ -1,11 +1,12 @@
 #ifndef HARDBLOCK_H
 #define HARDBLOCK_H
 
+#include "block.h"
 
-class hardblock
-{
+class hardblock : public Block {
 public:
-    hardblock();
+    hardblock() = default;
+    ~hardblock();
 };
 
 #endif // HARDBLOCK_H

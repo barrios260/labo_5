@@ -1,6 +1,7 @@
+#include <QGraphicsScene>
+
 #include "hardblock.h"
 
-hardblock::hardblock()
-{
-
+hardblock::~hardblock() {
+    scene()->removeItem(this);
 }

@@ -1,5 +1,5 @@
-#ifndef STAGE_H
-#define STAGE_H
+#ifndef FIELD_H
+#define FIELD_H
 
 #include <QGraphicsPixmapItem>
 #include <QObject>
@@ -16,21 +16,22 @@ enum blockType {
     Empty
 };
 
-class bomber;
+class Player;
 
 class Field : public QObject, public QGraphicsPixmapItem {
 
     Q_OBJECT
+
 public:
     Field(int x, int y, QObject *parent = nullptr);
     ~Field();
     blockType isBlockOnField() const;
-    void setUnDestroyableBlock(hardblock * hardblock);
-    void setDestoryableBlock(brokenblock * brokenblock);
-    void setBomb(bomba * bomba);
-    void playerOn(bomber * bomber);
-    void playerOut(bomber * bomber);
-    //void getPowerUp(Player * player);
+    void setUnDestroyableBlock(Hardblock *hardblock);
+    void setDestroyableBlock(Brokenblock * brokenblock);
+    void setBomb(Bomba * bomba);
+    void playerOn(Player * player);
+    void playerOut(Player * player);
+    void getPowerUp(Player * player);
     bool isBomb() const;
     bool isUnDestroyableBlock() const;
     bool isClear() const;
@@ -46,13 +47,11 @@ private:
     int _x;
     int _y;
     bool _isPlayerOn;
-    brokenblock * _brokenblock = nullptr;
-    hardblock * _hardblock = nullptr;
+    Brokenblock * _brokenblock = nullptr;
+    Hardblock * _hardblock = nullptr;
     explotion * _explotion = nullptr;
-    bomba * _bomba = nullptr;
-    bomber * _bomber[sizes::Players];
-    //PowerUp * _powerUp = nullptr;
+    Bomba * _bomba = nullptr;
+    Player * _players[sizes::Players];
 };
 
-
-#endif // STAGE_H
+#endif // FIELD_H

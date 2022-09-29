@@ -10,24 +10,24 @@ CONFIG += c++17
 
 SOURCES += \
     bomba.cpp \
-    bomber.cpp \
     brokenblock.cpp \
     explotion.cpp \
+    field.cpp \
     hardblock.cpp \
     main.cpp \
     mainwindow.cpp \
-    stage.cpp
+    player.cpp
 
 HEADERS += \
     block.h \
     bomba.h \
-    bomber.h \
     brokenblock.h \
     confi.h \
     explotion.h \
+    field.h \
     hardblock.h \
     mainwindow.h \
-    stage.h
+    player.h
 
 FORMS += \
     mainwindow.ui

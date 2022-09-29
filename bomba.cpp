@@ -1,15 +1,16 @@
 #include <QGraphicsScene>
 
 #include "bomba.h"
+#include "confi.h"
 
-bomba::bomba(int *maxbombs) : _maxbombs(maxbombs){ }
+Bomba::Bomba(int *maxBombs) : _maxBombs(maxBombs){ }
 
-bomba::~bomba() {
+Bomba::~Bomba() {
     scene()->removeItem(this);
 }
 
-void bomba::emitExplode() {
+void Bomba::emitExplode() {
     emit explode();
-    (*_maxbombs)++;
+    (*_maxBombs)++;
     delete this;
 }

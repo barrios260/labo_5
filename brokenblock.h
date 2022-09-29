@@ -4,10 +4,10 @@
 
 #include "block.h"
 
-class brokenblock : public Block {
+class Brokenblock : public Block {
 public:
-    brokenblock() = default;
-    ~brokenblock();
+    Brokenblock() = default;
+    ~Brokenblock();
 };
 
 

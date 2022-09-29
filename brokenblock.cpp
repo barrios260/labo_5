@@ -2,6 +2,6 @@
 
 #include "brokenblock.h"
 
-brokenblock::~brokenblock() {
+Brokenblock::~Brokenblock() {
     scene()->removeItem(this);
 }

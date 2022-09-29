@@ -5,21 +5,21 @@
 #include <QObject>
 #include <QGraphicsPixmapItem>
 
-class bomba : public QObject, public QGraphicsPixmapItem
+class Bomba : public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
 
 public:
-    explicit bomba() = default;
-    bomba(int * maxbombs);
-    ~bomba();
+    explicit Bomba() = default;
+    Bomba(int * maxbombs);
+    ~Bomba();
     void emitExplode();
 
 signals:
     void explode();
 
 private:
-    int * _maxbombs;
+    int * _maxBombs;
 
 };
 

@@ -2,6 +2,6 @@
 
 #include "hardblock.h"
 
-hardblock::~hardblock() {
+Hardblock::~Hardblock() {
     scene()->removeItem(this);
 }

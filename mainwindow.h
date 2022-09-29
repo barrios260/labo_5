@@ -1,40 +1,37 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+
 #include <QMainWindow>
 #include <QGraphicsScene>
-#include <QGraphicsRectItem>
+#include <QGraphicsView>
 #include <QKeyEvent>
-#include <QTimer>
-#include "bomber.h"
+#include <QGraphicsItem>
+#include <vector>
 
-
-QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
-QT_END_NAMESPACE
+#include "player.h"
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    void keyPressEvent(QKeyEvent *event);
-
-private slots:
-
-    void on_pushButton_clicked();
-
-    void hmov();
+public slots:
+    void playerDied();
 
 private:
-    int vel;
-    Ui::MainWindow *ui;
-    QGraphicsScene *scene;
-    //QGraphicsRectItem *barra;
-    soldado *jugador;
-    QTimer *timer;
+    void keyPressEvent(QKeyEvent *event);
+    void initFields(int frequency);
+
+    QGraphicsView *_view;
+    QGraphicsScene *_scene;
+    Player *_player1; //arrows
+    Player *_player2; //wsad
+    int _playersCount;
+    std::vector<std::vector<Field *>> _fields;
 };
+
 #endif // MAINWINDOW_H

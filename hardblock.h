@@ -3,10 +3,10 @@
 
 #include "block.h"
 
-class hardblock : public Block {
+class Hardblock : public Block {
 public:
-    hardblock() = default;
-    ~hardblock();
+    Hardblock() = default;
+    ~Hardblock();
 };
 
 #endif // HARDBLOCK_H

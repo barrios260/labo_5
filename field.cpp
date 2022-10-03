@@ -8,7 +8,7 @@
 
 Field::Field(int x, int y, QObject *parent) : QObject(parent), _x(x), _y(y), _isPlayerOn(false) {
     setPos(x, y);
-    setPixmap(QPixmap(":/graphics/imagenes/field.png"));
+    setPixmap(QPixmap(":/imagenes/field.png"));
     for (int i = 0; i < sizes::Players; i++) {
         _players[i] = nullptr;
     }
@@ -26,17 +26,17 @@ Field::~Field() {
 }
 
 void Field::setUnDestroyableBlock(Hardblock *hardblock) {
-    createPixmapItem(hardblock, ":/graphics/imagenes/solidblock.png");
+    createPixmapItem(hardblock, ":/imagenes/solidblock.png");
     _hardblock = hardblock;
 }
 
 void Field::setDestroyableBlock(Brokenblock *brokenblock) {
-    createPixmapItem(brokenblock, ":/graphics/imagenes/destroyblock.png");
+    createPixmapItem(brokenblock, ":/imagenes/destroyblock.png");
     _brokenblock = brokenblock;
 }
 
 void Field::setBomb(Bomba *bomba) {
-    createPixmapItem(bomba, ":/graphics/imagenes/bomba.png");
+    createPixmapItem(bomba, ":/imagenes/bomba.png");
     _bomba = bomba;
 }
 
@@ -108,7 +108,7 @@ void Field::createPixmapItem(QGraphicsPixmapItem *item, QString path) const {
 
 void Field::createExplosion() {
     _explotion = new explotion();
-    createPixmapItem(_explotion, ":/graphics/imagenes/fuego.png");
+    createPixmapItem(_explotion, ":/imagenes/fuego.png");
     if(_isPlayerOn == true) {
         for (int i = 0; i < sizes::Players; i++) {
             if(_players[i])

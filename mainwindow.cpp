@@ -15,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
     setCentralWidget(_view);
     setWindowTitle(tr("Bomberman"));
-    setWindowIcon(QPixmap(":/graphics/imagenes/bomba.png"));
+    setWindowIcon(QPixmap(":/imagenes/bomba.png"));
 
     initFields(3);
 
@@ -27,7 +27,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     connect(_player2, SIGNAL(playerDied()), this, SLOT(playerDied()));
     _fields[sizes::Rows - 1][sizes::Columns - 1]->playerOn(_player2);
     _scene->addItem(_player1);
-    _scene->addItem(_player2);
+    //_scene->addItem(_player2);
 
     setFocus();
 }
@@ -72,6 +72,9 @@ void MainWindow::keyPressEvent(QKeyEvent *event) {
         case Qt::Key_Q:
             _player1->plantBomb(_fields);
             break;
+        case Qt::Key_F4:
+            close();
+
     }
 
 }

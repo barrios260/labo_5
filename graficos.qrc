@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/graphics">
+    <qresource prefix="/">
         <file>imagenes/bomba.png</file>
         <file>imagenes/bomber.png</file>
         <file>imagenes/destroyblock.png</file>

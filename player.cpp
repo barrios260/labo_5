@@ -15,7 +15,7 @@ Player::Player(int x, int y, QObject *parent)  : QObject (parent) {
     _maxBombs = sizes::Bombs;
     _explosionSize = sizes::ExplosionRange;
     setPos(x * sizes::FieldSize, y * sizes::FieldSize);
-    setPixmap(QPixmap(":/img/img/player_front.png"));
+    setPixmap(QPixmap(":/imagenes/bomber.png"));
 }
 
 Player::~Player() {

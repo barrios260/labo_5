@@ -6,5 +6,6 @@
         <file>imagenes/field.png</file>
         <file>imagenes/fuego.png</file>
         <file>imagenes/solidblock.png</file>
+        <file>imagenes/fire.gif</file>
     </qresource>
 </RCC>

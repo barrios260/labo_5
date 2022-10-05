@@ -16,7 +16,8 @@ SOURCES += \
     hardblock.cpp \
     main.cpp \
     mainwindow.cpp \
-    player.cpp
+    player.cpp \
+    score.cpp
 
 HEADERS += \
     block.h \
@@ -27,7 +28,8 @@ HEADERS += \
     field.h \
     hardblock.h \
     mainwindow.h \
-    player.h
+    player.h \
+    score.h
 
 FORMS += \
     mainwindow.ui

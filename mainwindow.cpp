@@ -27,7 +27,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     connect(_player2, SIGNAL(playerDied()), this, SLOT(playerDied()));
     _fields[sizes::Rows - 1][sizes::Columns - 1]->playerOn(_player2);
     _scene->addItem(_player1);
-    //_scene->addItem(_player2);
+    _scene->addItem(_player2);
 
     setFocus();
 }

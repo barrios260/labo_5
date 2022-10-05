@@ -108,7 +108,7 @@ void Field::createPixmapItem(QGraphicsPixmapItem *item, QString path) const {
 
 void Field::createExplosion() {
     _explotion = new explotion();
-    createPixmapItem(_explotion, ":/imagenes/fuego.png");
+    createPixmapItem(_explotion, ":/imagenes/fire.gif");
     if(_isPlayerOn == true) {
         for (int i = 0; i < sizes::Players; i++) {
             if(_players[i])

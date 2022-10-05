@@ -8,7 +8,7 @@
 #include <QKeyEvent>
 #include <QGraphicsItem>
 #include <vector>
-
+#include "score.h"
 #include "player.h"
 
 class MainWindow : public QMainWindow
@@ -18,9 +18,11 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+     Score * score;
+     void recoger();
 public slots:
     void playerDied();
+
 
 private:
     void keyPressEvent(QKeyEvent *event);

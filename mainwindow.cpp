@@ -99,3 +99,10 @@ void MainWindow::initFields(int frequency) {
         }
     }
 }
+void MainWindow::onTimeOut()
+{
+    ui->lcdNumber_2->display(tiempo);
+    tiempo--;
+    if(tiempo == 0){
+        score = 0;}
+    }

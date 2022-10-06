@@ -10,6 +10,7 @@
 #include <vector>
 #include "score.h"
 #include "player.h"
+#include "ui_mainwindow.h"
 
 class MainWindow : public QMainWindow
 {
@@ -18,21 +19,24 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-     Score * score;
      void recoger();
 public slots:
     void playerDied();
 
 
+private slots:
+    void onTimeOut();
 private:
     void keyPressEvent(QKeyEvent *event);
     void initFields(int frequency);
-
+    int tiempo = 40;
+    Ui::MainWindow *ui;
     QGraphicsView *_view;
     QGraphicsScene *_scene;
-    Player *_player1; //arrows
-    Player *_player2; //wsad
+    Player *_player1; //wasdqf4
+    Player *_player2;
     int _playersCount;
+    int score = 0;
     std::vector<std::vector<Field *>> _fields;
 };
 

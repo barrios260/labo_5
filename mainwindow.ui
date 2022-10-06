@@ -19,35 +19,19 @@
      <rect>
       <x>0</x>
       <y>20</y>
-      <width>961</width>
-      <height>601</height>
+      <width>701</width>
+      <height>611</height>
      </rect>
     </property>
    </widget>
-   <widget class="QLCDNumber" name="lcdNumber">
+   <widget class="QLCDNumber" name="lcdNumber_2">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>20</y>
-      <width>64</width>
-      <height>23</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>980</x>
-      <y>40</y>
-      <width>61</width>
+      <x>720</x>
+      <y>160</y>
+      <width>91</width>
       <height>51</height>
      </rect>
-    </property>
-    <property name="text">
-     <string>hola</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::PlainText</enum>
     </property>
    </widget>
   </widget>
